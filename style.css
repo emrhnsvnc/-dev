@@ -1,0 +1,87 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('arka.jpg');
+    background-size: cover;
+    background-attachment: fixed; /* Arka plan resminin sabit kalmasını sağlar */
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+aside {
+    width: 30%;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+h2 {
+    color: #ff9900;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 20px;
+}
+
+main {
+    flex-grow: 1;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h1 {
+    color: #fff; /* Başlık rengi beyaz olarak değiştirildi */
+    font-size: 32px;
+    background-color: rgba(0, 0, 0, 0.5); /* Başlık arkasına koyu renkli bir arka plan eklendi */
+    padding: 10px 20px; /* Başlık etrafına padding eklendi */
+    border-radius: 8px; /* Başlık kenarlarını yuvarlak hale getirdik */
+}
+
+p {
+    color: #fff; /* Paragraf rengi beyaz olarak değiştirildi */
+    font-size: 18px;
+    opacity: 0.9; /* Paragraf metninin saydamlığı azaltıldı */
+    background-color: rgba(0, 0, 0, 0.5); /* Paragraf arkasına koyu renkli bir arka plan eklendi */
+    padding: 10px; /* Paragraf etrafına padding eklendi */
+    border-radius: 8px; /* Paragraf kenarlarını yuvarlak hale getirdik */
+}
+
+section {
+    margin-top: 40px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border: 2px solid #ff9900;
+    border-radius: 8px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+a {
+    color: #ff9900; /* Link rengi turuncu olarak değiştirildi */
+    text-decoration: none;
+}
