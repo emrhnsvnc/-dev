@@ -1,87 +1,66 @@
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-image: url('arka.jpg');
-    background-size: cover;
-    background-attachment: fixed; /* Arka plan resminin sabit kalmasını sağlar */
 }
 
-.container {
-    display: flex;
-    justify-content: space-between;
+.gallery {
+    position: relative;
 }
 
-aside {
-    width: 30%;
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 8px;
-    margin-right: 20px;
-}
-
-h2 {
-    color: #ff9900;
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-img {
-    max-width: 100%;
+.gallery img {
+    max-width: 20%; /* Ekranın yarısını kaplayacak şekilde boyutlandırır */
     height: auto;
-    display: block;
-    margin-bottom: 20px;
+    position: fixed; /* Sabit pozisyon */
+    top: 50%; /* Ekranın ortasına yerleştirir */
+    left: 50%; /* Ekranın ortasına yerleştirir */
+    transform: translate(-50%, -50%); /* Fotoğrafın merkezini ekranın merkezine getirir */
+    animation: fadeInOut 20s ease-in-out infinite; /* Animasyonun süresini 3 saniye olarak ayarladık */
 }
 
-main {
-    flex-grow: 1;
+.gallery p {
+    position: fixed; /* Sabit pozisyon */
+    bottom: 50px; /* Alt kenardan 10 piksel içerde */
+    left: 50%; /* Ekranın ortasına yerleştirir */
+    transform: translateX(-50%); /* Yatayda fotoğrafın merkezine hizalar */
+    color: white; /* Açıklama rengi */
+    background-color: rgba(0, 0, 0, 0.5); /* Açıklama arka plan rengi (yarı saydam siyah) */
+    padding: 10px; /* Açıklama içeriği ile kenar arasındaki boşluk */
+}
+button {
+    position: fixed; /* Sabit pozisyon */
+    bottom: 30px; /* Alt kenardan 30 piksel içerde */
 }
 
-header {
-    text-align: center;
-    margin-bottom: 30px;
+#prevButton {
+    left: 40px; /* Sol kenardan 20 piksel içerde */
 }
 
-h1 {
-    color: #fff; /* Başlık rengi beyaz olarak değiştirildi */
-    font-size: 32px;
-    background-color: rgba(0, 0, 0, 0.5); /* Başlık arkasına koyu renkli bir arka plan eklendi */
-    padding: 10px 20px; /* Başlık etrafına padding eklendi */
-    border-radius: 8px; /* Başlık kenarlarını yuvarlak hale getirdik */
+#nextButton {
+    left: 170px; /* Sol kenardan 20 piksel içerde */
 }
 
-p {
-    color: #fff; /* Paragraf rengi beyaz olarak değiştirildi */
-    font-size: 18px;
-    opacity: 0.9; /* Paragraf metninin saydamlığı azaltıldı */
-    background-color: rgba(0, 0, 0, 0.5); /* Paragraf arkasına koyu renkli bir arka plan eklendi */
-    padding: 10px; /* Paragraf etrafına padding eklendi */
-    border-radius: 8px; /* Paragraf kenarlarını yuvarlak hale getirdik */
+#randomButton {
+    left: 5%; /* Ekranın ortasına yerleştirir */
+    transform: translateX(-50%); /* Yatayda fotoğrafın merkezine hizalar */
 }
 
-section {
-    margin-top: 40px;
+#firstButton {
+    left: 10px; /* Sağ kenardan 20 piksel içerde */
 }
 
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 20px auto;
-    border: 2px solid #ff9900;
-    border-radius: 8px;
+@keyframes fadeInOut {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
 }
 
-ul {
-    list-style-type: none;
-    padding: 0;
+
+@keyframes buttonAnimation {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
 }
 
-li {
-    margin-bottom: 10px;
-}
-
-a {
-    color: #ff9900; /* Link rengi turuncu olarak değiştirildi */
-    text-decoration: none;
+button {
+    animation: buttonAnimation 0.5s ease-in-out infinite; /* 0.5 saniyede oynatır, yumuşak giriş ve çıkış yapar, sonsuz tekrar */
 }
